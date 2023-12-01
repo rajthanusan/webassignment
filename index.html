@@ -53,6 +53,10 @@
     <center>
         <div class="backgroundcolor custom-button">
 
+        <button type="button" class="custom-button" onclick="cmd('underline')">
+        <u><img src="format_underline_white_192x192.png" width="20" height="13" ></u>
+        </button>
+
             
             
     </center>
@@ -69,7 +73,11 @@
 
   
 <script>
-    
+    const editor = document.querySelector('.editor');
+    function cmd(command, value = null) {
+        document.execCommand(command, false, value);
+        saveState();
+    }
     
 </script>
 
