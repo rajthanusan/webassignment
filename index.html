@@ -87,7 +87,16 @@
 
   
 <script>
-     function alignText(align) {
+
+    const editor = document.querySelector('.editor');
+    function cmd(command, value = null) {
+        document.execCommand(command, false, value);
+        saveState();
+    }
+
+
+
+    function alignText(align) {
     const validAlignments = ['left', 'center', 'right', 'justify'];
 
     if (validAlignments.includes(align)) {
