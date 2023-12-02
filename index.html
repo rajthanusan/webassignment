@@ -54,6 +54,7 @@
     <div id="backgroundcolor" class="custom-button">
      
 
+
       <button type="button" class="custom-button" onclick="alignText('left')">
         <img src="left.png" width="10" height="10" >
       </button>
@@ -75,6 +76,24 @@
     </div>
   </center>
 
+        <button type="button" class="custom-button" onclick="cmd('italic')">
+        <i><img src="italic-xxl.png" width="10" height="10" ></i>
+
+
+        <button type="button" class="custom-button" onclick="cmd('underline')">
+        <u><img src="format_underline_white_192x192.png" width="20" height="13" ></u>
+
+        <button type="button" class="custom-button" onclick="cmd('bold')">
+        <b><img src="bold-xxl.png" width="10" height="10" ></b>
+
+
+        </button>
+
+            
+            
+    </center>
+
+
     <div class="editor" contenteditable="true">
         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
         The point of using Lorem Ipsum is that it has a more-of-less normal distribution of letters, as opposed to using 'Content here',
@@ -93,6 +112,7 @@
         document.execCommand(command, false, value);
         saveState();
     }
+
 
 
 
