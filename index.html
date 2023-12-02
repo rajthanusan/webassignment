@@ -50,12 +50,30 @@
     <h1> Online Text Editing Application....!</h1>
   </div>
 
-    <center>
-        <div class="backgroundcolor custom-button">
+  <center>
+    <div id="backgroundcolor" class="custom-button">
+     
 
-            
-            
-    </center>
+      <button type="button" class="custom-button" onclick="alignText('left')">
+        <img src="left.png" width="10" height="10" >
+      </button>
+
+      <button type="button" class="custom-button" onclick="alignText('center')">
+        <img src="center.png" width="10" height="10" >
+      </button>
+
+      <button type="button" class="custom-button" onclick="alignText('right')">
+        <img src="right.png" width="10" height="10" >
+      </button>
+
+      <button type="button" class="custom-button" onclick="alignText('justify')">
+        <img src="justify.png" width="10" height="10" >
+      </button>
+
+    
+
+    </div>
+  </center>
 
     <div class="editor" contenteditable="true">
         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
@@ -69,7 +87,21 @@
 
   
 <script>
-    
+     function alignText(align) {
+    const validAlignments = ['left', 'center', 'right', 'justify'];
+
+    if (validAlignments.includes(align)) {
+        const editor = document.getElementById('editor');
+
+        editor.style.textAlign = align;
+
+        saveState(); 
+    } else {
+        console.error('Invalid alignment value provided.');
+  }
+}
+
+
     
 </script>
 
